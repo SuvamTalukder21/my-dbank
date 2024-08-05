@@ -4,7 +4,7 @@ window.addEventListener("load", async function () {
   console.log("Finished loading"); // Check weather my js is working or not
   const currentAmount = await dbank.CheckBalance();
   console.log(currentAmount);
-  document.getElementById("value").innerText = Math.round(currentAmount * 100) / 100;
+  document.getElementById("value").innerText = Math.round(currentAmount * 100) / 100; // My problem is in this line
 });
 
 document.querySelector("form").addEventListener("submit", async function (event) {
@@ -35,5 +35,5 @@ document.querySelector("form").addEventListener("submit", async function (event)
 
 async function update() {
   const currentAmount = await dbank.CheckBalance();
-  document.getElementById("value").innerText = Math.round(currentAmount * 100) / 100;
+  document.getElementById("value").innerText = Math.round(currentAmount * 100) / 100; // My problem is in this line
 }
